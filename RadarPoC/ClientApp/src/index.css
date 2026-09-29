@@ -1,0 +1,33 @@
+@import "tailwindcss";
+@source "../src/**/*.{js,jsx}";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+@theme {
+  --color-ink:       #060606;
+  --color-surface:   #0d0d0d;
+  --color-surface-2: #1a1a1a;
+  --color-signal:    #e10600;
+  --color-signal-dk: #880000;
+  --color-paper:     #ffffff;
+  --color-paper-dim: #d9d9d9;
+  --color-muted:     #929292;
+  --color-accent-g:  #a7c393;
+  --color-accent-y:  #d8a244;
+  --color-accent-r:  #ff6862;
+}
+
+@layer base {
+  body {
+    background: #060606;
+    color: #d9d9d9;
+    font-family: "Inter", "Arial", sans-serif;
+    min-height: 100vh;
+  }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.25; }
+}
+
+.pulse { animation: pulse-dot 1.6s ease-in-out infinite; }

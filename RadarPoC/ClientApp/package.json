@@ -1,0 +1,21 @@
+{
+  "name": "radar-poc",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@microsoft/signalr": "^8.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-react": "^4.2.0",
+    "tailwindcss": "^4.3.3",
+    "vite": "^5.0.0"
+  },
+  "scripts": {
+    "start": "vite --port 3000",
+    "build": "vite build --outDir ../wwwroot"
+  }
+}
