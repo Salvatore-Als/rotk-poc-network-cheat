@@ -107,15 +107,26 @@ Le front React (`RadarPoC/ClientApp/`) affiche le killfeed et les positions en t
 
 **Ordre de lancement obligatoire :**
 
-1. **Lancer RadarPoC**, dans `/RadarPoC` :
+1. **Installer les dépendances front** (une seule fois), dans `/RadarPoC/ClientApp` :
+   ```
+   npm install
+   ```
+
+2. **Lancer le front React**, dans `/RadarPoC/ClientApp` :
+   ```
+   npm start
+   ```
+   Interface disponible sur `http://localhost:3000`.
+
+3. **Lancer RadarPoC**, dans `/RadarPoC` :
    ```
    dotnet run
    ```
-   Interface React sur `http://localhost:3000`. Badge : *"Connecté, en attente du jeu"*.
+   Badge : *"Connecté, en attente du jeu"*.
 
-2. **Lancer le launcher ROTK** normalement.
+4. **Lancer le launcher ROTK** normalement.
 
-3. **Lancer H1Z1 via le launcher**. Le process est détecté automatiquement, capture UDP démarre. Badge passe à *"Process H1Z1 détecté, capture active"*.
+5. **Lancer H1Z1 via le launcher**. Le process est détecté automatiquement, capture UDP démarre. Badge passe à *"Process H1Z1 détecté, capture active"*.
 
 Rejoindre une partie : le killfeed s'alimente en temps réel.
 
@@ -127,6 +138,7 @@ Rejoindre une partie : le killfeed s'alimente en temps réel.
 |---|---|
 | [Npcap](https://npcap.com/) (mode WinPcap) | Capture réseau |
 | .NET 8 SDK | RadarPoC C# |
+| Node.js 18+ | Front React (`npm install` + `npm start`) |
 | Python 3.10+ + `scapy` + `pycryptodome` | Scripts Python |
 | H1Z1 / ROTK | Lancé sur la même machine |
 
